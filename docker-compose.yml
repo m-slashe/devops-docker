@@ -15,4 +15,5 @@ services:
      - nexus-data:/nexus-data
 
 volumes:
-  jenkins_home
+  jenkins_home:
+  nexus_home:
