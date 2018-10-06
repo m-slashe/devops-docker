@@ -14,8 +14,16 @@ services:
     ports:
       - 8081:8081
     volumes:
-     - nexus-data:/nexus-data
+      - nexus-data:/nexus-data
+  bitbucket:
+    image: atlassian/bitbucket-server:5.7.1
+    volumes:
+      - bitbucket_home:/var/atlassian/application-data/bitbucket
+    ports:
+      - 7990:7990
+      - 7999:7999
 
 volumes:
   jenkins_home:
   nexus-data:
+  bitbucket_home:
